@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.course.reg.registration.model.Course" table="course" catalog="student_registration">
+        <id name="courseId" type="java.lang.Long">
+            <column name="COURSE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="courseName" type="string">
+            <column name="COURSE_NAME" length="10" not-null="true"/>
+        </property>
+        <property name="startDate" type="string">
+            <column name="COURSE_START_DATE" length="20" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="COURSE_DESCRIPTION" length="20" not-null="true"/>
+        </property>
+        <property name="noOfHours" type="int">
+            <column name="COURSE_HOURS" length="20" not-null="true"/>
+        </property>
+        <property name="noOfCredits" type="int">
+            <column name="COURSE_CREDITS" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!-- Course business object -->
+   <bean id="courseBo" class="com.course.reg.registration.bo.impl.CourseBoImpl" >
+   		<property name="courseDao" ref="courseDao" />
+   </bean>
+ 
+   <!-- Course Data Access Object -->
+   <bean id="courseDao" class="com.course.reg.registration.dao.impl.CourseDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.course.reg.registration.model.Student" table="student" catalog="student_registration">
+        <id name="studentId" type="java.lang.Long">
+            <column name="STUDENT_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="FIRST_NAME" length="10" not-null="true"/>
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" length="20" not-null="true" />
+        </property>
+        <property name="dob" type="string">
+            <column name="DOB" length="20" not-null="true"/>
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="20" not-null="true"/>
+        </property>
+        <property name="coursesStr" type="string">
+            <column name="COURSES" length="100" not-null="true"/>
+        </property>
+      
+    </class>
+</hibernate-mapping>
